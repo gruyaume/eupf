@@ -80,3 +80,5 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/wmnsk/go-pfcp => github.com/gruyaume/go-pfcp-fork v0.0.0-20240618005319-485f43e05a01
