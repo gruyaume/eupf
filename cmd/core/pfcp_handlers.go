@@ -106,6 +106,7 @@ func HandlePfcpAssociationSetupRequest(conn *PfcpConnection, msg message.Message
 		ie.NewCause(ie.CauseRequestAccepted), // a successful cause
 		newIeNodeID(conn.nodeId),             // its Node ID;
 		ie.NewRecoveryTimeStamp(conn.RecoveryTimestamp),
+		ie.NewUserPlaneIPResourceInformation(uint8(0x41), 0, conn.n3Address.String(), "", "", ie.SrcInterfaceAccess),
 		upFunctionFeaturesIE,
 	)
 
